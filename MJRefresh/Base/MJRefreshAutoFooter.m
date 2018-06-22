@@ -60,7 +60,7 @@
     self.onlyRefreshPerDrag = NO;
 }
 
-- (void)scrollViewContentSizeDidChange:(NSDictionary *)change
+- (void)scrollViewContentSizeDidChange:(NSDictionary<NSKeyValueChangeKey,id> *)change
 {
     [super scrollViewContentSizeDidChange:change];
     
@@ -68,7 +68,7 @@
     self.mj_y = self.scrollView.mj_contentH;
 }
 
-- (void)scrollViewContentOffsetDidChange:(NSDictionary *)change
+- (void)scrollViewContentOffsetDidChange:(NSDictionary<NSKeyValueChangeKey,id> *)change
 {
     [super scrollViewContentOffsetDidChange:change];
     
@@ -88,7 +88,7 @@
     }
 }
 
-- (void)scrollViewPanStateDidChange:(NSDictionary *)change
+- (void)scrollViewPanStateDidChange:(NSDictionary<NSKeyValueChangeKey,id> *)change
 {
     [super scrollViewPanStateDidChange:change];
     

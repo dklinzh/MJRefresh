@@ -100,16 +100,16 @@
     self.pan = nil;
 }
 
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context
 {
     // 遇到这些情况就直接返回
     if (!self.userInteractionEnabled) return;
-    
+
     // 这个就算看不见也需要处理
     if ([keyPath isEqualToString:MJRefreshKeyPathContentSize]) {
         [self scrollViewContentSizeDidChange:change];
     }
-    
+
     // 看不见
     if (self.hidden) return;
     if ([keyPath isEqualToString:MJRefreshKeyPathContentOffset]) {
@@ -119,9 +119,9 @@
     }
 }
 
-- (void)scrollViewContentOffsetDidChange:(NSDictionary *)change{}
-- (void)scrollViewContentSizeDidChange:(NSDictionary *)change{}
-- (void)scrollViewPanStateDidChange:(NSDictionary *)change{}
+- (void)scrollViewContentOffsetDidChange:(NSDictionary<NSKeyValueChangeKey, id> *)change{}
+- (void)scrollViewContentSizeDidChange:(NSDictionary<NSKeyValueChangeKey,id> *)change{}
+- (void)scrollViewPanStateDidChange:(NSDictionary<NSKeyValueChangeKey,id> *)change{}
 
 #pragma mark - 公共方法
 #pragma mark 设置回调对象和回调方法

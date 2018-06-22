@@ -14,12 +14,12 @@
     __unsafe_unretained UILabel *_stateLabel;
 }
 /** 所有状态对应的文字 */
-@property (strong, nonatomic) NSMutableDictionary *stateTitles;
+@property (strong, nonatomic) NSMutableDictionary<NSNumber *, NSString *> *stateTitles;
 @end
 
 @implementation MJRefreshBackStateFooter
 #pragma mark - 懒加载
-- (NSMutableDictionary *)stateTitles
+- (NSMutableDictionary<NSNumber *, NSString *> *)stateTitles
 {
     if (!_stateTitles) {
         self.stateTitles = [NSMutableDictionary dictionary];

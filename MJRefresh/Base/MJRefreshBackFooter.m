@@ -24,7 +24,7 @@
 }
 
 #pragma mark - 实现父类的方法
-- (void)scrollViewContentOffsetDidChange:(NSDictionary *)change
+- (void)scrollViewContentOffsetDidChange:(NSDictionary<NSKeyValueChangeKey,id> *)change
 {
     [super scrollViewContentOffsetDidChange:change];
     
@@ -68,7 +68,7 @@
     }
 }
 
-- (void)scrollViewContentSizeDidChange:(NSDictionary *)change
+- (void)scrollViewContentSizeDidChange:(NSDictionary<NSKeyValueChangeKey,id> *)change
 {
     [super scrollViewContentSizeDidChange:change];
     
