@@ -28,6 +28,8 @@ typedef NS_ENUM(NSInteger, MJRefreshState) {
     MJRefreshStateNoMoreData
 };
 
+NS_ASSUME_NONNULL_BEGIN
+
 /** 进入刷新状态的回调 */
 typedef void (^MJRefreshComponentRefreshingBlock)(void);
 /** 开始刷新后的回调(进入刷新状态后的回调) */
@@ -45,14 +47,14 @@ typedef void (^MJRefreshComponentEndRefreshingCompletionBlock)(void);
 }
 #pragma mark - 刷新回调
 /** 正在刷新的回调 */
-@property (copy, nonatomic) MJRefreshComponentRefreshingBlock refreshingBlock;
+@property (copy, nonatomic, nullable) MJRefreshComponentRefreshingBlock refreshingBlock;
 /** 设置回调对象和回调方法 */
 - (void)setRefreshingTarget:(id)target refreshingAction:(SEL)action;
 
 /** 回调对象 */
-@property (weak, nonatomic) id refreshingTarget;
+@property (weak, nonatomic, nullable) id refreshingTarget;
 /** 回调方法 */
-@property (assign, nonatomic) SEL refreshingAction;
+@property (assign, nonatomic, nullable) SEL refreshingAction;
 /** 触发回调（交给子类去调用） */
 - (void)executeRefreshingCallback;
 
@@ -61,9 +63,9 @@ typedef void (^MJRefreshComponentEndRefreshingCompletionBlock)(void);
 - (void)beginRefreshing;
 - (void)beginRefreshingWithCompletionBlock:(void (^)(void))completionBlock;
 /** 开始刷新后的回调(进入刷新状态后的回调) */
-@property (copy, nonatomic) MJRefreshComponentbeginRefreshingCompletionBlock beginRefreshingCompletionBlock;
+@property (copy, nonatomic, nullable) MJRefreshComponentbeginRefreshingCompletionBlock beginRefreshingCompletionBlock;
 /** 结束刷新的回调 */
-@property (copy, nonatomic) MJRefreshComponentEndRefreshingCompletionBlock endRefreshingCompletionBlock;
+@property (copy, nonatomic, nullable) MJRefreshComponentEndRefreshingCompletionBlock endRefreshingCompletionBlock;
 /** 结束刷新状态 */
 - (void)endRefreshing;
 - (void)endRefreshingWithCompletionBlock:(void (^)(void))completionBlock;
@@ -105,3 +107,5 @@ typedef void (^MJRefreshComponentEndRefreshingCompletionBlock)(void);
 + (instancetype)mj_label;
 - (CGFloat)mj_textWith;
 @end
+
+NS_ASSUME_NONNULL_END
