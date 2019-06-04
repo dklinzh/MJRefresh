@@ -12,8 +12,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MJRefreshNormalHeader : MJRefreshStateHeader
 @property (weak, nonatomic, readonly) UIImageView *arrowView;
+@property (weak, nonatomic, readonly) UIActivityIndicatorView *loadingView;
+
+
 /** 菊花的样式 */
-@property (assign, nonatomic) UIActivityIndicatorViewStyle activityIndicatorViewStyle;
+@property (assign, nonatomic) UIActivityIndicatorViewStyle activityIndicatorViewStyle MJRefreshDeprecated("请使用 loadingView 进行设置");
 @end
 
 NS_ASSUME_NONNULL_END

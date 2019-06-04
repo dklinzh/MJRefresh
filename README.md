@@ -1,12 +1,9 @@
-## 寻求志同道合的小伙伴
-* 因本人工作忙，没有太多时间去维护MJRefresh，在此向广大框架使用者说声：非常抱歉！😞
-* 现寻求志同道合的小伙伴一起维护此框架，有兴趣的小伙伴可以[发邮件](mailto:richermj123go@vip.qq.com)给我，非常感谢😊
-* 如果一切OK，我将开放框架维护权限（github、pod等）
-* MJExtension已经找到一位小伙伴(＾－＾)V
-
 ![(logo)](http://images.cnitblog.com/blog2015/497279/201505/051004492043385.png)
 
 ## MJRefresh
+
+![podversion](https://img.shields.io/cocoapods/v/MJRefresh.svg)
+
 * An easy way to use pull-to-refresh
 
 ## Contents
@@ -348,7 +345,7 @@ self.webView.scrollView.mj_header = [MJRefreshNormalHeader headerWithRefreshingB
 
 ## Remind
 * ARC
-* iOS>=6.0
+* iOS>=8.0
 * iPhone \ iPad screen anyway
 
 ## <a id="Hope"></a>Hope
@@ -365,3 +362,10 @@ self.webView.scrollView.mj_header = [MJRefreshNormalHeader headerWithRefreshingB
 ![(step03)](http://ww1.sinaimg.cn/mw1024/800cdf9ctw1eq0viocpo5j20wc0dc0un.jpg)
    * StepO4
 ![(step04)](http://ww3.sinaimg.cn/mw1024/800cdf9ctw1eq0vir137xj20si0gewgu.jpg)
+
+## 寻求志同道合的小伙伴
+
+- 因本人工作忙，没有太多时间去维护MJRefresh，在此向广大框架使用者说声：非常抱歉！😞
+- 现寻求志同道合的小伙伴一起维护此框架，有兴趣的小伙伴可以[发邮件](mailto:richermj123go@vip.qq.com)给我，非常感谢😊
+- 如果一切OK，我将开放框架维护权限（github、pod等）
+- 目前已经找到3位小伙伴(＾－＾)V
