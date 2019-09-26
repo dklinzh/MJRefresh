@@ -10,9 +10,9 @@
 #import <UIKit/UIKit.h>
 #import "MJRefreshConst.h"
 
-NS_ASSUME_NONNULL_BEGIN
-
 @class MJRefreshHeader, MJRefreshFooter;
+
+NS_ASSUME_NONNULL_BEGIN
 
 @interface UIScrollView (MJRefresh)
 /** 下拉刷新控件 */
